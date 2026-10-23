@@ -1,0 +1,55 @@
+{
+  "name": "utilane",
+  "version": "1.0.0",
+  "description": "TypeScript/JavaScript ESM utilities for browsers and Node.js, with named imports and tree-shaking support",
+  "keywords": [
+    "date",
+    "dom",
+    "file",
+    "javascript",
+    "node",
+    "utils"
+  ],
+  "homepage": "https://github.com/DvShu/utilane#readme",
+  "bugs": {
+    "url": "https://github.com/DvShu/utilane/issues"
+  },
+  "license": "MIT",
+  "author": "Tenny <tenny.shu@foxmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DvShu/utilane.git"
+  },
+  "files": [
+    "lib",
+    "README.zh-CN.md"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "browser": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": "./lib/index.js",
+    "./browser": "./lib/browser.js",
+    "./node": "./lib/node.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "lint": "oxlint --deny-warnings src scripts tests tsdown.config.ts",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "docs:check": "npm run build && node scripts/check-docs.mjs",
+    "prepack": "npm run lint && npm run format:check && npm run typecheck && npm test && node scripts/check-docs.mjs",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.2",
+    "oxfmt": "^0.74.0",
+    "oxlint": "^1.89.0",
+    "tsdown": "^0.22.14",
+    "typescript": "^5.6.3"
+  }
+}

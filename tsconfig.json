@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "removeComments": false,
+    "newLine": "lf",
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
+    "useDefineForClassFields": false,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowImportingTsExtensions": false,
+    "outDir": "./lib",
+    "lib": ["ES6", "DOM", "ES2020.Date", "esnext"],
+    "isolatedDeclarations": true,
+    "rootDir": "./src",
+    "types": ["node"]
+  },
+  "exclude": ["node_modules", "lib", "tsdown.config.ts"],
+  "include": ["src/index.ts", "src/node.ts", "src/browser.ts"]
+}

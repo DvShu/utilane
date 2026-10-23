@@ -1,0 +1,39 @@
+# Utilane
+
+> TypeScript / JavaScript ESM utility library for browsers and Node.js. Documentation describes the current repository; published npm versions may differ.
+
+## Start here
+
+- [README](README.md): installation, supported environments and the three public entry points.
+- [Documentation index](docs/index.md): module map and reading order.
+- [Root API](docs/api/index.md): public exports and complete type declarations for utilane.
+- [Browser API](docs/api/browser.md): public exports for utilane/browser.
+- [Node API](docs/api/node.md): public exports for utilane/node.
+
+## Guides
+
+- [Common utilities](docs/common.md)
+- [Arrays and sets](docs/array.md)
+- [Dates](docs/date.md)
+- [Colors](docs/color.md)
+- [IDs](docs/id.md)
+- [Base32 and Base62](docs/base-codec.md)
+- [Crypto](docs/crypto.md)
+- [Validation](docs/validator.md)
+- [Browser tools](docs/browser.md)
+- [Node tools](docs/node.md)
+
+## Chinese documentation
+
+- [中文 README](README.zh-CN.md): Chinese quick start.
+- [中文文档目录](docs/zh-CN/index.md): complete Chinese guides and API references.
+- [中文贡献指南](CONTRIBUTING.zh-CN.md): contribution and release workflow.
+- [中文变更记录](CHANGELOG.zh-CN.md): version changes.
+
+## Maintenance
+
+- [Agent rules](AGENTS.md)
+- [Contributing and release workflow](CONTRIBUTING.md)
+- [Changelog](CHANGELOG.md)
+
+Only the documented package entry points are public. Root hash is asynchronous Web Crypto; Node hash is synchronous and has different arguments. Base32 is RFC 4648 with strict uppercase and padding validation. Supporting declarations are not necessarily public exports. This is a repository-relative index, not a hosted discovery endpoint.
