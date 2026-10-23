@@ -22,7 +22,8 @@
   },
   "files": [
     "lib",
-    "README.zh-CN.md"
+    "README.zh-CN.md",
+    "llms.txt"
   ],
   "type": "module",
   "sideEffects": false,
